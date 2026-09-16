@@ -474,6 +474,11 @@ img.covers:hover {
     top: 0;
 }
 
+#aboutpage summary,
+#aboutpage p {
+    font-size: clamp(7px, 1.4vw, 18px);
+}
+
 .importantheadline {
     display: inline-block;
     position: relative;
