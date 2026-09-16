@@ -1,0 +1,11 @@
+div#comments div {
+    background-color: #d1d1d0;
+    border-radius: 1em;
+    box-sizing: border-box;
+    max-width: 768px;
+    width: 80%;
+    margin: 1em auto;
+    padding: 1em;
+    text-align: justify;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.39);
+}
