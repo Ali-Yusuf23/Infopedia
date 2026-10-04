@@ -1,18 +1,3 @@
-@media screen and (max-width: 768px) {
-    aside {
-        width: 15%;
-        height: auto;
-        position: relative;
-    }
-
-    main {
-        margin-left: 0;
-    }
-
-    .album-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 header {
     background-color:#ebf4c3b9;
@@ -659,7 +644,7 @@ img.covers:hover {
     text-align: center;
     bottom: 0;
     transform: translateX(-50%);
-    animation: pushUp 1.3s ease;
+    animation: pushUp 1.3s ease backwards 8s;
 }
 
 input#commenter-name {
@@ -748,11 +733,14 @@ div#comments div {
     padding: 1em;
     text-align: justify;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.39);
+}
+
+div#comments {
     animation: fromRight 0.8s ease;
 }
 
 #spacey {
-    margin-top: 20%;
+    margin-top: 60%;
 }
 
 div#comments div button {
@@ -794,9 +782,11 @@ footer {
 @keyframes headerEnter {
     0% {
         transform: translateY(-100px);
+        opacity: 0;
     }
-
+    
     100% {
+        opacity: 1;
         transform: translateY(0);
     }
 }
@@ -956,3 +946,96 @@ footer {
         visibility: hidden;
     }
 }
+
+
+@media (max-width: 768px) {
+        aside {
+            background-color: #393f1c;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            height: 4rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            /* scrollbar-width: none; */
+            top: 13%;
+            left: 0;
+            box-shadow: 0px 0 30px rgba(0, 0, 0, 0.945) ;
+            z-index: 999;
+            display: flex;
+            animation: headerEnter 1.92s ease 2s backwards;
+        }
+
+        #menu {
+            margin-left: 1rem
+        }
+
+        .menubttn {
+            margin-bottom: 75px;
+            background-color:#9EC757;
+            border-radius: 3em;
+            border:#3d372a solid 2px;
+            width: 25%;
+            height: 1.8em;
+            font-size: 1.5em;
+            margin-left: 0.6em;
+        }
+        
+        .menubttn span {
+            display: block;
+            position: relative;
+            color:#3A362C;
+            top: -2.5px;
+            font-size: clamp(10px, 1.5vw, 25px);
+            width: 90%;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+        }
+        
+        main {
+            margin-left: 0;
+            margin-top: 4rem;
+        }
+    
+        .album-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .sidetext {
+            display: none;
+        }
+
+        footer {
+            left: 0;
+        }
+
+        footer p.rights {
+            margin: auto;
+            right: 0;
+        }
+
+        #typecomment  {
+            background-color:#1A1E06;
+            border-radius: 3em;
+            width: 100%;
+            position: fixed;
+            z-index: 20090;
+            max-width: 768px;
+            width: 80%;
+            left: 0;
+            right: 0;
+            align-items: center;
+            text-align: center;
+            bottom: 0;
+            transform: translateX(0%);
+            animation: pushUp 1.3s ease;
+            margin: auto;
+
+            /* scale: 0.9; */
+        }
+    }
