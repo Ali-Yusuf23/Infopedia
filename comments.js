@@ -4,9 +4,12 @@ const supabaseAccess = window.supabase.createClient("https://kajklrjqzioraekaiqj
 async function getComments() {
     const { data, error } = await supabaseAccess
         .from('comments')
-        .select('*');
+        .select('*')
+        .order('likes', { ascending: false });
     console.log(data);
     console.log(error);
+    const commentsAmount = document.querySelector("#commentsAmount");
+    commentsAmount.textContent = `${data.length} comments ≣`;
     const container = document.querySelector("#comments");
     container.innerHTML = "";
     data.forEach(comment => {
@@ -65,4 +68,9 @@ commentFormz.addEventListener("submit", async (e) => {
     console.log(error);
     commentFormz.reset();
     getComments();
+});
+
+const commenterNameInput = document.querySelector('#commenter-name');
+commenterNameInput.addEventListener('input', () => {
+    commenterNameInput.value = commenterNameInput.value.replace(/\s/g, "");
 });

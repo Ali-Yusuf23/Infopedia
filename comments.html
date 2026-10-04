@@ -36,12 +36,13 @@
                 <p class="headerfixer">----</p>
                 <div class="pages">
                     <div id="about" class="page active">
-                        <h2 class="importantheadline">Comment section</h2>
+                        <h2 class="importantheadline">Comment section</h2><br>
+                        <p id="commentsAmount"></p>
                         <div id="typecomment">
                             <form id="commentForm">
                                 <h2 class="importantheadline commenttitle">Write Your Comments!</h2><br>
-                                <input type="text" id="commenter-name" placeholder="Your Name..."><br>
-                                <textarea id="comment" placeholder="what are your thoughts?"></textarea><br>
+                                <input type="text" id="commenter-name" placeholder="Your Name..." required><br>
+                                <textarea id="comment" placeholder="what are your thoughts?" required></textarea><br>
                                 <button id="commentbttn" type="submit">upload</button>
                             </form>
                         </div>
