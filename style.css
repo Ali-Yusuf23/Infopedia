@@ -631,12 +631,12 @@ img.covers:hover {
     margin-right: 0;
 }
 
-#typecomment  {
+/* #typecomment,
+#typecommentReply  {
     background-color:#1A1E06;
     border-radius: 3em;
     width: 100%;
     position: fixed;
-    z-index: 2003;
     max-width: 768px;
     width: 80%;
     left: 57.5%;
@@ -644,10 +644,41 @@ img.covers:hover {
     text-align: center;
     bottom: 0;
     transform: translateX(-50%);
+} */
+
+#typecommentReply {
+    z-index: 2004;
+    background-color:#1A1E06;
+    border-radius: 3em;
+    width: 100%;
+    position: fixed;
+    max-width: 768px;
+    width: 80%;
+    left: 57.5%;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+#typecomment {
     animation: pushUp 1.3s ease backwards 8s;
+    z-index: 2003;
+    background-color:#1A1E06;
+    border-radius: 3em;
+    width: 100%;
+    position: fixed;
+    max-width: 768px;
+    width: 80%;
+    left: 57.5%;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    transform: translateX(-50%);
 }
 
-input#commenter-name {
+input#commenter-name,
+input#replier-name {
     display: block;
     padding: 1em;
     margin: 0 auto;
@@ -661,15 +692,18 @@ input#commenter-name {
     color: #1A1E06;
 }
 
-input#commenter-name::placeholder {
+input#commenter-name::placeholder,
+input#replier-name::placeholder {
     color: #1A1E06;
 }
 
-textarea#comment::placeholder {
+textarea#comment::placeholder,
+textarea#reply::placeholder {
     color: #1A1E06;
 }
 
-textarea#comment {
+textarea#comment,
+textarea#reply {
     display: block;
     padding: 1em;
     margin: 0 auto;
@@ -683,7 +717,8 @@ textarea#comment {
     color: #1A1E06;
 }
 
-button#commentbttn {
+button#commentbttn,
+button#replybttn {
     display: block;
     padding: 1em;
     margin: 0 auto;
@@ -723,7 +758,7 @@ button#commentbttn {
     color:#6a833e
 }
 
-div#comments div {
+div#comments div.comment-card {
     background-color: #6a833e;
     border-radius: 1em;
     box-sizing: border-box;
@@ -928,6 +963,23 @@ footer {
     animation: loadingAnimScr 6.0s ease;
 }
 
+#comments div .replyButton,
+#comments div .showhideRepliesButton {
+    background: transparent;
+}
+
+.repliesContainer {
+    width: 100%;
+}
+
+div#comments div.comment-card div.reply-card {
+    margin: 0;
+    padding: 0.8em 0.5em;
+    box-shadow: -3px 0 0 black;
+    border-radius: 0.45em;
+    margin-bottom: 0.7em;
+}
+
 @keyframes loadingAnimScr {
     0% {
         opacity: 1;
@@ -1024,7 +1076,7 @@ footer {
             border-radius: 3em;
             width: 100%;
             position: fixed;
-            z-index: 20090;
+            z-index: 2003;
             max-width: 768px;
             width: 80%;
             left: 0;
@@ -1035,7 +1087,12 @@ footer {
             transform: translateX(0%);
             animation: pushUp 1.3s ease;
             margin: auto;
+        }
 
-            /* scale: 0.9; */
+        #typecommentReply {
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: translateX(0%);
         }
     }

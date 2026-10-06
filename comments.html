@@ -21,7 +21,7 @@
             <aside class="sidebar">
                 <h2 id="menu">Menu</h2>
                 <button class="menubttn" onclick="window.location.href='index.html'"><span>Back</span></button>
-                <button class="menubttn" onclick="window.location.href='comments.html'"><span>Comments</span></button>
+                <!-- <button class="menubttn" onclick="window.location.href='comments.html'"><span>Comments</span></button> -->
                 <p id="sidebarEnd">_____</p>
             </aside>
         </div>
@@ -43,7 +43,15 @@
                                 <h2 class="importantheadline commenttitle">Write Your Comments!</h2><br>
                                 <input type="text" id="commenter-name" placeholder="Your Name..." required><br>
                                 <textarea id="comment" placeholder="what are your thoughts?" required></textarea><br>
-                                <button id="commentbttn" type="submit">upload</button>
+                                <button id="commentbttn" type="submit">upload ➤</button>
+                            </form>
+                        </div>
+                        <div id="typecommentReply">
+                            <form id="replyForm">
+                                <h2 class="importantheadline commenttitle" id="replyTitle"></h2><br>
+                                <input type="text" id="replier-name" placeholder="Your Name..." required><br>
+                                <textarea id="reply" placeholder="what are your thoughts?" required></textarea><br>
+                                <button id="replybttn" type="submit">upload ➤</button>
                             </form>
                         </div>
                         <div id="comments"></div>
