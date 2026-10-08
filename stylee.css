@@ -662,7 +662,7 @@ img.covers:hover {
 }
 
 #typecomment {
-    animation: pushUp 1.3s ease backwards 8s;
+    animation: pushUp 1.3s ease backwards 3s;
     z-index: 2003;
     background-color:#1A1E06;
     border-radius: 3em;
@@ -794,19 +794,19 @@ div#comments div button {
 header,
 #headerr,
 .logo {
-    animation: headerEnter 0.77s ease 2s backwards;
+    animation: headerEnter 0.77s ease;
 }
 
 aside {
-    animation: sidebarEnter 1.92s ease 2s backwards;
+    animation: sidebarEnter 1.92s ease;
 }
 
 footer {
-    animation: footerEnter 3.08s ease 2s backwards;
+    animation: footerEnter 3.08s ease;
 }
 
 .pages {
-    animation: mainEnter 4.23s ease 2s backwards;
+    animation: mainEnter 4.23s ease;
 }
 
 
@@ -971,15 +971,19 @@ footer {
 .repliesContainer {
     width: 100%;
     margin-top: 1em;
-    box-shadow: -3px 0 1px rgba(0, 0, 0, 0.459);
+    /* box-shadow: -3px 0 0 rgba(0, 0, 0, 0.589); */
+    /* border-radius: 0.45em; */
 }
 
 div#comments div.comment-card div.reply-card {
     margin: 0;
     padding: 0.8em 0.5em;
     /* box-shadow: -3px 0 1px rgb(51, 66, 42); */
+    box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.459),
+                inset -2px -2px 5px 0 #99c76f88;
     border-radius: 0.45em;
     margin-bottom: 0.7em;
+    background-color: #01020028;
 }
 
 @keyframes loadingAnimScr {
@@ -1017,7 +1021,7 @@ div#comments div.comment-card div.reply-card {
             box-shadow: 0px 0 30px rgba(0, 0, 0, 0.945) ;
             z-index: 999;
             display: flex;
-            animation: headerEnter 1.92s ease 2s backwards;
+            animation: headerEnter 1.92s ease;
         }
 
         #menu {
